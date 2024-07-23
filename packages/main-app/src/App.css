@@ -6,10 +6,8 @@ body{
 
 
 .main-container {
-  width: 100vw;
-  height: 100vh;
-  --s: 37px;
-
+  min-height: 100vh;
+  --s: 38px;
   --c: #0000, #282828 0.5deg 119.5deg, #0000 120deg;
   --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
   --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));

@@ -3,7 +3,23 @@ const { getLoader, loaderByName } = require("@craco/craco");
 const TailwindCssWebPlugin = require("./TailwindCssWebPlugin");
 
 const packages = [];
-packages.push(path.join(__dirname, "../file-manager"));
+const folders = [
+  "file-manager",
+  "emi-calculator",
+  "pagination",
+  "password-generator",
+  "sudoko",
+];
+
+const tailwindCssPackages = [
+  "file-manager",
+  "emi-calculator",
+  "pagination",
+  "password-generator",
+];
+for (const folder of folders) {
+  packages.push(path.join(__dirname, `../${folder}`));
+}
 
 module.exports = {
   eslint: {
@@ -23,7 +39,9 @@ module.exports = {
         match.loader.include = include.concat(packages);
       }
       try {
-        webpackConfig.plugins.push(new TailwindCssWebPlugin("file-manager"));
+        tailwindCssPackages.forEach((folder) => {
+          webpackConfig.plugins.push(new TailwindCssWebPlugin(folder));
+        });
       } catch (err) {
         console.log("=> err", err);
       }

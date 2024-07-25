@@ -1,4 +1,5 @@
-# SuperApp
+# SuperApp (Monorepo)
+
 
 Welcome to **SuperApp**, a collection of five individual React projects bundled together to showcase various functionalities and implementations. This project is built using a monorepo structure and utilizes tools like Craco, React Router, and Tailwind CSS. Deployed on Vercel, SuperApp demonstrates a variety of skills and features in a cohesive manner.
 
